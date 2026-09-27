@@ -1,4 +1,4 @@
-"""Configuration for the standalone xHamster API."""
+"""Configuration for the standalone PornHub API."""
 import os
 from dotenv import load_dotenv
 
