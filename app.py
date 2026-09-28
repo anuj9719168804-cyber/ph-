@@ -57,7 +57,13 @@ def root():
 
 @app.get("/health")
 def health():
-    return {"status": True, "service": "pornhub-api", "provider": "PornHub"}
+    return {
+        "status": True,
+        "service": "pornhub-api",
+        "provider": "PornHub",
+        # False => yt-dlp can't use curl_cffi here (unsupported curl_cffi version?)
+        "impersonation": pornhub_resolver.impersonation_available(),
+    }
 
 
 @app.get("/api/pornhub")
