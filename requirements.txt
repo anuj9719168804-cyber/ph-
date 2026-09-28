@@ -1,6 +1,7 @@
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
-yt-dlp>=2026.8.0
+# [curl-cffi] extra lets yt-dlp pick the curl_cffi version it supports (a manual
+# curl-cffi>=0.16 pin can fall outside that range and disable impersonation).
+yt-dlp[default,curl-cffi]>=2026.8.0
 python-dotenv==1.0.1
-curl-cffi>=0.16.0
 PySocks>=1.7.1
